@@ -4,17 +4,18 @@ function SLItem({viewer, tag, keyword, subKeyword, per, pay}) {
     return (
         <ItemBox>
             <div className="thumbnail">
+                
                 <span>{viewer}</span>
             </div>
             <div className="info">
                 <div></div>
-                <div>
-                    <div>{subKeyword}</div>
-                    <div>
+                <dl>
+                    <dt>{subKeyword}</dt>
+                    <dd>
                         <span>{per}</span>
                         <span>{pay}</span>
-                    </div>
-                </div>
+                    </dd>
+                </dl>
             </div>
         </ItemBox>
     )
