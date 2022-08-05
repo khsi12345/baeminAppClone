@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Fragment } from 'react';
 import TopNavigate from './Components/TopNavigate';
@@ -11,6 +10,11 @@ import SectionContainer from './Components/SectionContainer';
 import RecentOrder from './Components/SectionContainer/RecentOrder';
 import TodaySale from './Components/SectionContainer/TodaySale';
 import ShoppingLive from './Components/SectionContainer/ShoppingLive';
+import DoGift from './Components/SectionContainer/DoGift';
+import NationwideTaste from './Components/SectionContainer/NationwideTaste';
+import AdBanner from './Components/AdBanner';
+import Footer from './Components/Footer';
+import DoThis from './Components/SectionContainer/DoThis';
 
 function App() {
   return (
@@ -67,6 +71,27 @@ function App() {
           <ShoppingLive/>
         </SectionContainer>
       </article>
+      <article>
+        <SectionContainer title="마음을 선물해보세요" viewText="전체 보기">
+          <DoGift/>
+        </SectionContainer>
+      </article>
+      <article>
+        <SectionContainer title="전국의 별미가 한가득" viewText="전체 보기">
+          <NationwideTaste/>
+        </SectionContainer>
+      </article>
+      <article>
+        <SectionContainer title="이런 일도 한답니다" viewText="전체 보기">
+          <DoThis/>
+        </SectionContainer>
+      </article>
+      <section>
+        <AdBanner/>
+      </section>
+      <section>
+        <Footer/>
+      </section>
     </Fragment>
   );
 }
