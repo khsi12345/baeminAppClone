@@ -34,7 +34,7 @@ function Slider() {
 
 const SliderItem = styled.div`
     height: 4rem;
-    border: 3px solid violet;
+    border: 1px solid gray;
 `;
 
 const PageDot = styled.span`

@@ -4,13 +4,9 @@ import {FaSearch} from "react-icons/fa"
 function SearchInput() {
     return (
         <Fragment>
-            <div className=" flex mx-auto pl-4 w-11/12 h-10 bg-zinc-100 items-center text-slate-400">
-                {
-                    <div className="pr-2">
-                        <FaSearch/>
-                    </div>
-                    }
-                육회비빔밥? 쌀국수? 육개장?
+            <div className="px-4 relative">
+                <i className="absolute ml-4 mt-4">{<FaSearch/>}</i>
+               <input  className="w-full h-11 pl-12" placeholder="찾아라! 맛있는 음식과 맛집"/>
             </div>
         </Fragment>
     )

@@ -22,9 +22,13 @@ function OrderItem({storeName, starRating, tagItems}) {
 }
 
 const ItemBox = styled.div`
+    display: inline-block;
     width: 9.375rem;
     &+& {
         margin-left: 1.25rem;
+    }
+    &:last-child {
+        margin-right: 16px;
     }
 `;
 

@@ -21,42 +21,37 @@ const items = [
 ]
 
 function DoThis() {
-    const itemComponent = items.map((item) => {
-        return (
-            <div>
-                <div>
-                    <img src={item.url} alt={item.des}/>
-                </div>
-                <p>{item.des}</p>
-            </div>
-        )
-    })
     return(
         <Container>
-            <Masonry 
-            breakpointCols={2} 
-            className="masonry-grid"
-            columnClassName="masonry-grid-column"
-            >
-                {itemComponent}
-            </Masonry>
+                {
+                    items.map((item) => {
+                        return (
+                            <Item>
+                                <div>
+                                    <img src={item.url} alt={item.des}/>
+                                </div>
+                                <figcaption>{item.des}</figcaption>
+                            </Item>
+                        )
+                    })
+                }
         </Container>
     )
 }
 const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: space-between;
+    /* align-items: flex-end; */
     padding: 0 16px;
-    .masonry-grid{
-        display: flex;
-        /* margin-left: 30px; */
+`;
 
-        .masonry-grid-column+
-        .masonry-grid-column{
-            
-                margin-left: 16px;
-            
-        }
-    }
-   
+const Item = styled.figure`
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 45%;
+    height: min-content;
 `;
 
 export default DoThis;
